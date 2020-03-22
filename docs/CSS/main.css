@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,136,169,1) 0%, rgba(255,255,255,1) 100%);
+  }
+
+  a {
+    color: #000;
+  }
+
+  .seleccion{
+    background-color: #0088A9;
+  }
+  .cabecera {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .cabecera ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .cabecera li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+  }
+  
+  .cabecera li a:hover,
+  .cabecera .menu-btn:hover {
+    background-color: #0088A9;
+  }
+  
+  .cabecera .titulo {
+    display: block;
+    float: left;
+    font-size: 1.2em;
+    padding: 10px 5px;
+    text-decoration: none;
+  }
+
+  .cabecera .logo img{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  
+  
+  .cabecera .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  .cabecera .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .cabecera .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .cabecera .menu-icon .navicon:before,
+  .cabecera .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .cabecera .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .cabecera .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  .cabecera .menu-btn {
+    display: none;
+  }
+  
+  .cabecera .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .cabecera .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .cabecera .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .cabecera .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .cabecera .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .cabecera .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  .presentacion{
+    display: block;
+    width: 90%;
+    overflow: hidden;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+
+  .slider {
+    border: 2px solid black;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .slider ul{
+    display: flex;
+    width: 500%;
+    animation: fotos 25s infinite alternate;
+  }
+
+  @keyframes fotos{
+    0% {margin-left: 0;}
+    17.5%{margin-left: 0;}
+    20%{margin-left: -100%;}
+    37.5%{margin-left: -100%;}
+    40%{margin-left: -200%;}
+    57.5%{margin-left: -200%;}
+    60%{margin-left: -300%;}
+    77.5%{margin-left: -300%;}
+    80%{margin-left: -400%;}
+    100%{margin-left: -400%;}
+  }
+
+  .slider li{
+    width: 100%;
+    list-style: none;
+  }
+
+  .slider img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .izquierda{   
+    display: block;
+    text-align: center;
+  }
+
+  .izquierda h3{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 7%;
+  }
+
+  .izquierda p{
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .izquierda img{
+    width: 200px;
+    margin-top: 7%;
+  }
+
+  .derecha{
+    display: block;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+
+  .derecha h3{
+    font-size: 20px;
+    padding-bottom: 7%;
+  }
+
+  .derecha .imagenes{
+    margin: auto;
+    width: 75%;
+  }
+
+  .derecha img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .container-nosotros{
+    display: block;
+    width: 90%;
+    overflow: hidden;
+    margin-top: 19%;
+    margin-left: 5%;
+    margin-bottom: 4%;
+    text-align: center;
+  }
+  .nosotros h3{
+    font-size: 20px;
+    padding-bottom: 3%;
+  }
+  .nosotros p{
+    font-size: 13px;
+    padding: 7%;
+    text-align: justify;
+  }
+  .nosotros img{
+    border: 2px solid black;
+    width: 270px;
+    filter: drop-shadow(4px 4px 4px black);
+  }
+
+  .nosotros img:hover{
+    animation: rota 0.5s linear;
+  }
+
+  @keyframes rota{
+    from{transform: rotatez(0);}
+    to{transform: rotatez(720deg);}
+  }
+
+  .animacion{
+    width: 256px;
+    height: 64px;
+    margin: auto;
+    margin-bottom: 15%;
+    overflow: hidden;
+  }
+  .animacion .fondo img{
+    width: 600%;
+    height: 64px;
+    animation: fondo 3s linear infinite;
+  }
+
+  @keyframes fondo{
+    from{transform: translate(0);}
+    to{transform: translate(-512px);}
+  }
+
+  .personaje{
+    width: 42.6px;
+    height: 64px;
+    overflow: hidden;
+    animation: muevete 4s linear infinite;
+  }
+
+  @keyframes muevete{
+    from{transform: translate(-100%,-120%)}
+    to{transform: translate(700%,-120%);}
+  }
+
+  .personaje img{
+    width: 256px;
+    height: 64px;
+    animation: camina 0.7s steps(6) infinite;
+  }
+
+  @keyframes camina{
+    from{transform: translate(0);}
+    to{transform: translate(-100%);}
+  }
+
+  footer{
+    background-color: #0088A9;
+    box-shadow: 1px 1px 0 4px rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 0.2%;
+  }
+
+  footer a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer img{
+    width: 25px;
+    float: right;
+    margin-right: 1%;
+  }
+
+  .cursos{
+    display: block;
+    width: 90%;
+    margin-top: 19%;
+    margin-left: 5%;
+    margin-bottom: 4%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cursos h3{
+    font-size: 20px;
+    padding-bottom: 3%;
+  }
+
+  .cursos img{
+    width: 270px;
+    margin-bottom: 10%;
+    filter: drop-shadow(4px 4px 4px black);
+  }
+
+  .cursos img:hover{
+    transform: scale(0.8);
+  }
+  
+  form{
+    width: 90%;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    overflow: hidden;
+    font-size: 15px;
+  }
+
+  fieldset{
+    margin-bottom: 10%;
+    overflow: hidden;
+  }
+
+  legend{
+    text-align: center;
+    font-size: 30px;
+    padding: 2%;
+  }
+
+  form div{
+    margin-bottom: 3%;
+  }
+
+  .preguntas, .botones{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 15%;
+  }
+
+  .botones input{
+    width: 30%;
+    height: 30px;
+  }
+
+  @media (min-width: 59em) {
+    .cabecera li {
+      float: left;
+    }
+    .cabecera li a {
+      padding: 20px 30px;
+    }
+    .cabecera .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .cabecera .menu-icon {
+      display: none;
+    }
+    
+  }
+
+  @media (min-width: 600px) {
+    .presentacion{
+      margin-top: 10%;
+    }
+    .izquierda h3{
+      font-size: 30px;
+      padding-bottom: 4%;
+    }
+    .izquierda p{
+      font-size: 20px;
+    }
+    .izquierda img{
+      width: 300px;
+    }
+    .derecha{
+      margin-bottom: 10%;
+    }
+    .derecha h3{
+      font-size: 30px;
+      padding-bottom: 4%;
+    }
+    .derecha .imagenes{
+      width: 90%;
+    }
+    .derecha img{
+      width: 120px;
+    }
+    .container-nosotros{
+      width: 96%;
+      margin-top: 10%;
+      margin-left: 2%;
+      margin-bottom: 5%;
+    }
+    .nosotros h3{
+      font-size: 30px;
+      padding-bottom: 3%;
+    }
+    .nosotros p{
+      font-size: 20px;
+      padding: 5%;
+    }
+    .nosotros img{
+      width: 512px;
+    }
+    .animacion{
+      width: 512px;
+      height: 128px;
+    }
+    .animacion .fondo img{
+      width: 200%;
+      height: 128px;
+      animation: fondo 5s linear infinite;
+    }
+    @keyframes fondo{
+      from{transform: translate(0);}
+      to{transform: translate(-512px);}
+    }
+    .personaje{
+      width: 90px;
+      height: 128px;
+    }
+    @keyframes muevete{
+      from{transform: translate(-200%,-120%)}
+      to{transform: translate(1300%,-120%);}
+    }
+    .personaje img{
+      width: 512px;
+      height: 128px;
+    }
+    .cursos{
+      width: 96%;
+      margin-top: 10%;
+      margin-left: 2%;
+      margin-bottom: 0%;
+    }
+    .cursos h3{
+      font-size: 30px;
+      padding-bottom: 3%;
+    }
+  
+    .cursos img{
+      width: 512px;
+      margin-bottom: 5%;
+    }
+    form{
+      width: 96%;
+      margin-top: 7%;
+      margin-left: 2%;
+      margin-bottom: 5%;
+      font-size: 20px;
+    }
+    fieldset{
+      margin-bottom: 1%;
+    }
+    legend{
+      font-size: 40px;
+    }
+    form div{
+      margin-bottom: 4%;
+    }
+    .preguntas, .botones{
+      margin-bottom: 10%;
+    }
+    .botones input{
+      font-size: 20px;
+      height: 50px;
+    }
+    input, select{
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .cabecera .titulo{
+      font-size: 2em;
+      padding: 10px 10px;
+    }
+    .cabecera .logo img{
+      width: 40px;
+      height: 40px;
+    }
+    .presentacion{
+      margin-top: 8%;
+    }
+    .izquierda h3{
+      font-size: 35px;
+    }
+    .izquierda p{
+      font-size: 25px;
+    }
+    .izquierda img{
+      width: 400px;
+    }
+    .derecha h3{
+      font-size: 35px;
+    }
+    .derecha .imagenes{
+      width: 90%;
+    }
+    .derecha img{
+      width: 200px;
+      height: 150px;
+    }
+    .container-nosotros{
+      margin-top: 7%;
+      margin-bottom: 10%;
+    }
+    .nosotros h3{
+      font-size: 30px;
+      padding-bottom: 0%;
+    }
+    .nosotros p{
+      font-size: 20px;
+      padding: 3%;
+    }
+    .nosotros img{
+      width: 792px;
+    }
+    .animacion{
+      width: 792px;
+      height: 192px;
+    }
+    .animacion .fondo img{
+      width: 200%;
+      height: 192px;
+    }
+    .cursos{
+      margin-top: 7%;
+    }
+    .cursos h3{
+      font-size: 40px;
+    } 
+    .cursos img{
+      width: 792px;
+    }
+    form{
+      margin-top: 5%;
+      margin-bottom: 20%;
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 1200px){
+    .presentacion{
+      display: flex;
+      width: 96%;
+      margin-top: 8%;
+      margin-left: 2%;
+      margin-bottom: 11%;
+    }
+    .cabecera .logo img{
+      margin-top: 0.5%;
+    }
+    .slider{
+      margin-bottom: 32%;
+    }
+    .izquierda{
+      margin-right: 2%;
+    }
+    .derecha{
+      margin-left: 1%;
+    }
+    .izquierda h3{
+      font-size: 30px;
+      padding-bottom: 10%;
+    }
+    .izquierda p{
+      font-size: 20px;
+      padding-bottom: 10%;
+    }
+    .izquierda img{
+      width: 300px;
+    }
+    .derecha h3{
+      font-size: 30px;
+      padding-bottom: 20%;
+    }
+    .derecha .imagenes{
+      width: 90%;
+    }
+    .derecha img{
+      width: 150px;
+      height: 130px;
+    }
+    .container-nosotros{
+      margin-top: 5%;
+      height: 60em;
+    }
+    .nosotros h3{
+      position: absolute;
+      top: 9%;
+      left: 3.5%;
+      width: 25%;
+      font-size: 30px;
+    }
+    .nosotros p{
+      position: absolute;
+      top: 15%;
+      left: 3.5%;
+      font-size: 20px;
+      padding: 0%;
+      width: 24%;
+    }
+    .nosotros .p2{
+      top: 55%;
+    }
+    .nosotros img{
+      position: absolute;
+      top: 9%;
+      right: 5%;
+      width: 792px;
+    }
+    .animacion{
+      position: absolute;
+      top: 70%;
+      left: 32%;
+    }
+    .cursos{
+      margin-top: 3%;
+      height: 1080px;
+    }
+    .cursos article{
+      display: inline-block;
+      margin: 3%;
+      width: 40%;
+    }
+    .cursos h3{
+      font-size: 30px;
+    } 
+    .cursos img{
+      width: 512px;
+      height: 350px;
+    }
+    .container-formulario{
+      width: 96%;
+      margin: 0 auto;
+    }
+    form{
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 4%;
+      margin-bottom: 17%;
+      font-size: 20px;
+    }
+    legend{
+      font-size: 30px;
+    }
+  }
+
+  @media(min-width: 1500px) {
+    .nosotros h3{
+      left: 10%;
+      font-size: 40px;
+    }
+    .nosotros p{
+      top: 15%;
+      font-size: 30px;
+      width: 38%;
+    }
+    .nosotros .p2{
+      top: 50%;
+    }
+    .animacion{
+      left: 49%;
+    }
+    .cursos{
+      margin-top: 4%;
+      height: 1080px;
+    }
+    .cursos article{
+      margin: 1%;
+    }
+
+  }
+  

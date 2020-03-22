@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CSS/main.css" rel="stylesheet" type="text/css" />
+    <title>Fomento del Deporte</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <nav>
+            <a href="/index.html" class="logo"><img src="/imagenes/logo.png"></a>
+            <a href="/index.html" class="titulo">Fomento del Deporte</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="SobreNosotros.html">Nosotros</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a class="seleccion" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-formulario">
+        <form>
+            <fieldset>
+                <legend class="datos">Datos Personales</legend>
+                <div class="nombre">
+                    Nombre----
+                    <input type="text" name="nombre" value="" placeholder="Introduce tu nombre..." />
+                </div>
+                <div class="apellidos">
+                    Apellidos---
+                    <input type="text" name="apellidos" value="" placeholder="Introduce tus apellidos..." />
+                </div>
+                <div class="email">
+                    Email--------
+                    <input type="text" name="Email" value="" placeholder="Introduce tu email..." />
+                </div>
+                <div class="sexo">
+                    Sexo:--------
+                    <label>
+                        <input type="radio" name="genero" value="hombre"> Hombre
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="mujer"> Mujer
+                    </label>
+                </div>
+                <div class="provincia">
+                    <label for="Provincia">Provincia--</label>
+                    <select name="Provincia">
+                        <option value="" selected="selected">- Seleccione -</option>
+                        <option value="Tenerife">Santa Cruz de Tenerife</option>
+                        <option value="GranCanaria">Las Palmas de Gran Canaria</option>
+                    </select>
+                </div>
+                <div class="curso">
+                    <label for="Curso">Curso--------</label>
+                    <select name="Curso">
+                        <option value="" selected="selected">- Seleccione -</option>
+                        <option value="Karate">Karate</option>
+                        <option value="Futbol">Futbol</option>
+                        <option value="Natacion">Natación</option>
+                        <option value="Atletismo">Atletismo</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Preguntas</legend>
+                <div class="preguntas">
+                    <textarea id="mensaje" name="mensaje" cols="39" rows="10"></textarea>
+                </div>
+            </fieldset>
+            <div class="informacion">
+                <label>
+                    <input type="checkbox" name="condiciones" value="condiciones">Acepto compartir mi información...
+                </label>
+            </div>
+            <div class="botones">
+                <input type="reset" value="Limpiar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <a href="https://www.tenerife.es/portalcabtfe/es/">©Cabildo de tenerife</a>
+        <a href="https://www.instagram.com/?hl=es"><img src="/IMAGENES/instagram.png" alt="Instagram"></a>
+        <a href="https://twitter.com/?lang=es"><img src="/IMAGENES/twitter.png" alt="Twitter"></a>
+        <a href="https://es-es.facebook.com/"><img src="/IMAGENES/facebook.png" alt="Facebook"></a>
+    </footer>
+</body>
+
+</html>
